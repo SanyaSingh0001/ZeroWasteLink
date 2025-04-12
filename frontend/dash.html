@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Role-Based Dashboard</title>
+  <link rel="stylesheet" href="dash.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab-button active" data-tab="donor">Donor</div>
+    <div class="tab-button" data-tab="ngo">NGO</div>
+    <div class="tab-button" data-tab="admin">Admin</div>
+  </div>
+  <br><br>
+
+  <!-- Donor Tab -->
+<div class="tab-content active" id="donor">
+  <div class="card donor-card">
+    <h2>Post Surplus Food</h2><hr>
+    <input type="text" placeholder="Food Name">
+    <input type="text" placeholder="Quantity">
+    <input type="date">
+    <button>Post</button>
+  </div>
+  <div class="card donor-card">
+    <h3>Your Posted Items</h3><hr>
+    <div class="item-card">
+      <p><strong>Name:</strong> Bread</p>
+      <p><strong>Quantity:</strong> 5</p>
+      <p><strong>Expiry:</strong> 2025-04-15</p>
+      <p><strong>Status:</strong> Unclaimed</p>
+    </div>
+  </div>
+  <button class="logout">Logout</button>
+</div>
+
+  <!-- NGO Tab -->
+  <div class="tab-content" id="ngo">
+    <div class="card">
+      <h2 style="text-align: center;">Available Food Near You</h2><hr>
+      <div class="search-container">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search">
+      </div>
+      <div class="cards">
+        <p>Name: Rice</p>
+        <p>Quantity: 10</p>
+        <p><i class="fa-solid fa-location-dot"></i> Location: Downtown</p>
+        <button>Claim</button>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="text-align: center;">Claimed Items</h3><hr>
+      <div class="cards">
+        <p>Name: Milk</p>
+        <p>Quantity: 3</p>
+        <p>Claimed on: 2025-04-10</p>
+      </div>
+    </div>
+    <button class="logout">Logout</button>
+  </div>
+
+  <!-- Admin Tab -->
+  <div class="tab-content" id="admin">
+    <div class="card">
+      <h3 style="text-align: center;">Stats Overview</h3><hr>
+      <div class="stats">
+        <p>Total Donors: 15</p>
+        <p>Total NGOs: 20</p>
+        <p>Total Posts: 120</p>
+        <p>Total Claims: 95</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="text-align: center;">Recent Posts</h3><hr>
+      <table>
+        <tr><th>Food</th><th>Quantity</th><th>Date</th></tr>
+        <tr><td>Bread</td><td>5</td><td>2025-04-10</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3 style="text-align: center;">NGO Activity</h3><hr>
+      <table>
+        <tr><th>NGO</th><th>Claimed</th><th>Last Active</th></tr>
+        <tr><td>FoodSaver</td><td>8</td><td>2025-04-11</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3 style="text-align: center;">User Management</h3><hr>
+      <button>Manage Users</button>
+    </div>
+    <button class="logout">Logout</button>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

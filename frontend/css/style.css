@@ -1,0 +1,486 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: #fff; /* White text for strong contrast */
+    background: linear-gradient(to bottom, #1c1c1c, #333333); /* Dark gradient background */
+}
+
+/* Header */
+header {
+    background: #444; /* Neutral dark background for header */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6f61; /* Bold coral accent */
+}
+
+nav a {
+    color: #fff;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Navigation Buttons */
+.btn-nav {
+    background: #ff6f61; /* Coral button color */
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+.btn-nav:hover {
+    background: #d1584f; /* Slightly darker coral */
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/hero-bg.jpg') center/cover no-repeat;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    color: #ff6f61; /* Coral headline */
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem; /* Larger paragraph text */
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.buttons .btn {
+    background: #4caf50; /* Vibrant green for action buttons */
+    padding: 12px 20px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.buttons .btn-alt {
+    background: transparent;
+    border: 2px solid #fff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.buttons .btn:hover {
+    background: #388e3c; /* Dark green hover effect */
+}
+
+/* Testimonials */
+.testimonials blockquote {
+    border-left: 5px solid #ff6f61;
+    padding: 1rem;
+    font-style: italic;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #ccc; /* Softer grey text */
+    text-align: center;
+    padding: 2rem;
+}
+
+footer .social a {
+    color: #ff6f61;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+}
+
+footer .social a:hover {
+    color: #d1584f; /* Slightly darker coral on hover */
+}
+/* Image and Content Container */
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem; /* Adds spacing between elements */
+    margin-top: 2rem;
+}
+
+/* Individual Step (Image + Content) */
+.step {
+    flex: 1 1 calc(33.33% - 2rem); /* Flexible width for responsiveness */
+    background-color: #292929; /* Subtle card background for contrast */
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adds depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px); /* Lifts the card slightly */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Enhances shadow on hover */
+}
+
+/* Image and Content Container */
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem; /* Space between cards */
+    margin-top: 2rem;
+}
+
+/* Individual Step (Image + Content) */
+.step {
+    flex: 1 1 calc(33.33% - 2rem); /* Ensure equal width for responsiveness */
+    background-color: #292929; /* Dark card background */
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px); /* Elevates the card on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Adds stronger shadow */
+}
+
+/* Uniform Image Styling */
+.step img {
+    width: 150px; /* Fixed width for consistency */
+    height: 150px; /* Fixed height to match width */
+    object-fit: cover; /* Ensures images fit proportionally */
+    margin-bottom: 1rem;
+    border-radius: 10px; /* Smooth corners for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Hover effect */
+}
+
+.step img:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* Step Title */
+.step h3 {
+    font-size: 1.5rem;
+    color: #ff6f61; /* Coral for emphasis */
+    margin-bottom: 0.5rem;
+}
+
+/* Step Description */
+.step p {
+    font-size: 1rem;
+    color: #ddd; /* Light grey for text readability */
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+/* Image and Content Container */
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Centers cards evenly */
+    gap: 2rem; /* Adds space between cards */
+    margin-top: 3rem; /* Adjusted spacing */
+}
+
+/* Individual Step (Image + Content) */
+.step {
+    flex: 1 1 calc(30% - 2rem); /* Keeps cards responsive */
+    background-color: #292929; /* Dark card background for contrast */
+    padding: 1.5rem; /* Increased padding for breathing room */
+    border-radius: 12px; /* Smooth corners */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Enhanced hover shadow */
+}
+
+/* Uniform Image Styling */
+.step img {
+    width: 180px; /* Increased size for better visibility */
+    height: 180px; /* Adjusted height */
+    object-fit: cover; /* Ensures proportional scaling */
+    margin-bottom: 1rem; /* Keeps spacing consistent */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Adds hover interaction */
+}
+
+.step img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Heading Styling */
+.how-it-works h2 {
+    font-size: 2.5rem; /* Increased size for emphasis */
+    text-align: center;
+    color: #ff6f61; /* Coral accent for bold visibility */
+    margin-bottom: 2rem; /* Adds spacing below */
+    position: relative;
+}
+
+/* Heading Position Adjustment */
+.how-it-works h2::after {
+    content: "";
+    display: block;
+    width: 120px; /* Line width for decorative touch */
+    height: 4px; /* Line height */
+    background-color: #ff6f61; /* Coral line */
+    margin: 0.5rem auto; /* Centers the line */
+}
+/* General Section Styling */
+section {
+    padding: 4rem 2rem; /* Increased padding for breathing room */
+    text-align: center; /* Centered text for sections */
+}
+
+/* Our Mission Section */
+.about {
+    background-color: #222; /* Dark background for contrast */
+    color: #ddd; /* Light text for readability */
+    margin: 3rem 0; /* Added spacing above and below the section */
+    padding: 3rem 2rem; /* Balanced spacing for content */
+    border-radius: 10px; /* Rounded corners for a polished look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds depth */
+}
+
+.about h2 {
+    font-size: 2.5rem; /* Emphasized heading size */
+    margin-bottom: 1rem; /* Spacing between heading and content */
+    color: #ff6f61; /* Coral accent for focus */
+}
+
+.about p {
+    font-size: 1.2rem; /* Slightly larger for better readability */
+    line-height: 1.8; /* Increased line height for breathing room */
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #292929; /* Dark background to contrast with text */
+    padding: 4rem 2rem; /* Adequate padding for spacious feel */
+    margin-top: 3rem; /* Separation from previous sections */
+    border-radius: 10px; /* Rounded corners for style */
+}
+
+.testimonials h2 {
+    font-size: 2.5rem; /* Increased size for prominence */
+    color: #ff6f61; /* Coral accent to match section theme */
+    margin-bottom: 2rem; /* Adds space between heading and testimonials */
+    text-align: center; /* Ensures heading alignment */
+}
+
+/* Align Heading with Decorative Line */
+.testimonials h2::after {
+    content: "";
+    display: block;
+    width: 120px; /* Decorative line width */
+    height: 4px; /* Decorative line height */
+    background-color: #ff6f61; /* Coral for consistency */
+    margin: 0.5rem auto; /* Centers the line */
+}
+
+/* Blockquote Styling */
+blockquote {
+    font-style: italic; /* Stylized text */
+    color: #ddd; /* Light grey for readability */
+    border-left: 5px solid #ff6f61; /* Coral border for emphasis */
+    padding: 1rem 2rem; /* Spacing around text */
+    margin: 2rem auto; /* Centers quotes in the section */
+    max-width: 600px; /* Limits quote width for readability */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle depth */
+}
+/* Footer Section */
+footer {
+    background-color: #292929; /* Dark background for contrast */
+    color: #ddd; /* Light grey for text readability */
+    padding: 3rem 2rem; /* Spacious padding */
+    border-top: 4px solid #ff6f61; /* Decorative border */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Even spacing between sections */
+    align-items: flex-start; /* Align sections to the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Contact Us Section */
+footer .contact-form {
+    flex: 1; /* Takes up equal space */
+    max-width: 400px; /* Limits width */
+    margin: 0; /* Removes auto centering */
+    text-align: left; /* Align content to the left */
+}
+
+footer .contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ff6f61; /* Coral heading */
+}
+
+footer .contact-form input,
+footer .contact-form textarea {
+    width: 100%; /* Full width input fields */
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444; /* Subtle border */
+    border-radius: 5px;
+    background-color: #333; /* Dark background */
+    color: #ddd; /* Light text */
+    font-size: 1rem;
+}
+
+footer .contact-form button {
+    background-color: #ff6f61; /* Coral button */
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+footer .contact-form button:hover {
+    background-color: #d1584f; /* Darker coral on hover */
+}
+
+/* Social Media Icons */
+footer .social {
+    flex: 1; /* Takes up equal space */
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center icons */
+    gap: 1.5rem; /* Adds space between icons */
+    padding-top: 1rem; /* Adds spacing from footer top */
+}
+
+footer .social a {
+    color: #ff6f61; /* Coral for emphasis */
+    font-size: 1.8rem; /* Larger icon size */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+}
+
+footer .social a:hover {
+    color: #d1584f; /* Slightly darker coral */
+    transform: scale(1.2); /* Enlarges on hover */
+}
+
+/* Footer Section */
+footer {
+    background-color: #292929; /* Dark background for contrast */
+    color: #ddd; /* Light grey for readability */
+    padding: 3rem 2rem; /* Spacious padding */
+    display: flex;
+    flex-direction: column; /* Ensures stacking layout */
+    align-items: center; /* Centers all elements */
+    border-top: 4px solid #ff6f61; /* Coral accent */
+}
+
+/* Contact Form Section (Centered) */
+footer .contact-form {
+    max-width: 400px; /* Limits width for balance */
+    width: 100%;
+    text-align: center; /* Centers content */
+}
+
+footer .contact-form h3 {
+    font-size: 1.6rem;
+    color: #ff6f61; /* Coral heading */
+    margin-bottom: 1rem;
+}
+
+footer .contact-form input,
+footer .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ddd;
+}
+
+footer .contact-form button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+footer .contact-form button:hover {
+    background-color: #d1584f;
+}
+
+/* Social Media Icons */
+footer .social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+footer .social a {
+    color: #ff6f61;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social a:hover {
+    color: #d1584f;
+    transform: scale(1.2);
+}
+
+/* Copyright Text */
+footer p {
+    font-size: 1rem;
+    text-align: center; /* Center the text */
+    margin-top: 1rem;
+}

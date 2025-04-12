@@ -1,0 +1,215 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f0f8ff, #add8e6);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+  
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .tab-button {
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 20px;
+    background: #0077b6; /* Vibrant blue for tabs */
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+  }
+
+  .tab-button:hover{
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .tab-button.active {
+    background: #0096c7; /* Darker blue for active tabs */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Tab Content */
+  .tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+  }
+  
+  .tab-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Donor Section */
+  .donor-card {
+    background-color: #f9fbfc; /* Light and clean */
+    padding: 30px; /* Larger padding for better spacing */
+    margin: 25px auto; /* Space between cards */
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .donor-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .donor-card h2, .donor-card h3 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #0077b6;
+  }
+  
+  .item-card {
+    padding: 20px;
+    margin-top: 15px; /* Space between item cards */
+    background-color: #ffffff; /* Neutral background */
+    border: 1px solid #dae6f1;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input Fields and Buttons */
+  input, button {
+    display: block;
+    margin: 15px auto;
+    width: 95%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #eaf4fc;
+    /* border: 2px solid black; */
+  }
+  
+  input:focus {
+    border: 2px solid #0077b6;
+  }
+  
+  button {
+    background-color: #0077b6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+
+  }
+  
+  button:hover {
+    background-color: #005f86;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  /* Logout Button */
+  .logout {
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #ef5350;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    /* border: 2px solid black; */
+  }
+  
+  .logout:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* NGO Section */
+  .card {
+    background-color: #ffffff; /* Clean white for content */
+    padding: 30px; /* More padding for larger divs */
+    margin: 25px auto; /* Space between divs */
+    max-width: 700px; /* Adjusted for uniformity */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 500px;
+    /* border: 2px solid black; */
+
+  }
+
+  .cards {
+    background-color: #ffffff; /* Clean white for content */
+    padding: 30px; /* More padding for larger divs */
+    margin: 25px auto; /* Space between divs */
+    max-width: 700px; /* Adjusted for uniformity */
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 450px;
+    /* border: 2px solid black; */
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-container {
+    position: relative;
+    margin: 20px auto;
+  }
+  
+  .search-container i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #90a4ae;
+  }
+  
+  .search-container input {
+    padding-left: 35px; /* Proper padding for icon */
+    width: 90%; /* Adjusted to fit card size */
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-container input:focus {
+    border: 2px solid #0077b6;
+  }
+  
+  /* Admin Section */
+  .stats {
+    background-color: #f9fbfc; /* Light and cohesive */
+    padding: 30px;
+    margin: 25px auto; /* Space between stats */
+    max-width: 700px; /* Adjusted for uniformity */
+    border-radius: 15px;
+    border: 2px solid #dae6f1;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid black;
+  }
+  
+  .stats:hover {
+    transform: scale(1.02);
+  }
+  
+  .stats p {
+    color: #333; /* Uniform text color */
+  }
